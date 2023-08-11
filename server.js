@@ -7,17 +7,19 @@ import authRoutes from "./routes/authRoute.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
-import path from 'path' ;
+import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+
+//const __dirname = dirname(fileURLToPath(import.meta.url));
 //configure env
 dotenv.config();
 //const path=require('path');
 //databse config
 connectDB();
-
+const __dirname = dirname(fileURLToPath(import.meta.url));
 //rest object
-const__filename = fileURLToPath(import.meta.url);
-const__dirname = path.dirname(__filename);
+//const__filename = fileURLToPath(import.meta.url);
+//const__dirname = path.dirname(__filename);
 const app = express();
 
 //middelwares
